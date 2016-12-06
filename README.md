@@ -14,7 +14,7 @@ Ihre Trainer: [Johannes Hoppe](http://haushoppe-its.de/), [Gregor Woiwode](http:
 Liebe Teilnehmer,  
 wir möchten euch unbedingt darauf hinweisen, dass die Installation unbedingt rechtzeitig geschehen muss. Am Veranstaltungsort ist die Bandbreite stark eingeschränkt. Wenn Ihr die __angular-cli@1.0.0-beta.20-4__ schon installiert habt, braucht Ihr nicht zwingend updaten. Es handelt sich hauptsächlich im Bugfixes und um ein kleines Versions-Upgrade von Angular.
 
-Beste Grüße
+Beste Grüße  
 Johannes & Gregor
 
 
