@@ -5,4 +5,7 @@
 
   <h2>{{ book.title }} <small>{{ book.rating }}</small></h2>
   <p>{{ book.description }}</p>
+
+  <button (click)="rateUp()" class="btn">+1</button>
+  <button (click)="rateDown()" class="btn btn-danger">-1</button>
 </div>

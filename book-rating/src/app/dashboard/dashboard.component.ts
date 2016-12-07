@@ -11,6 +11,11 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
 
+  get count() {
+    console.log('ZUGRIFF');
+    return this.books.length;
+  }
+
   constructor() { }
 
   ngOnInit() {
