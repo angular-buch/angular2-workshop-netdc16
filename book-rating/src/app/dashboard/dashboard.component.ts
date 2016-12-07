@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.bs.getAll()
-      .subscribe(books => {
+      .subscribe((books: Book[]) => {
         this.books = books;
         this.books.sort();
       });
@@ -29,5 +29,9 @@ export class DashboardComponent implements OnInit {
 
   reorderBooks(book: Book) {
     this.books.sort((a, b) => b.rating - a.rating);
+  }
+
+  appendBook(book: Book) {
+    this.books.push(book);
   }
 }

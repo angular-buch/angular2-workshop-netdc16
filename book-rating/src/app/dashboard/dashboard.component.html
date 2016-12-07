@@ -1,4 +1,7 @@
 Anzahl: {{ count }}
+
+<button (click)="toggleForm = !toggleForm">Show</button>
+<app-create-book *ngIf="toggleForm" (created)="appendBook($event)"></app-create-book>
 <app-book [book]="b"
           *ngFor="let b of books"
           (rated)="reorderBooks($event)">

@@ -1,0 +1,25 @@
+<form [class.hidden]="hidden" (submit)="addBook()" class="form">
+  <label>ISBN</label>
+  <input [(ngModel)]="book.isbn"
+         name="isbn"
+         type="text"
+         class="form-control">
+
+  <label>Titel</label>
+  <input [(ngModel)]="book.title"
+         name="title"
+         type="text"
+         class="form-control">
+
+  <label>Beschreibung</label>
+  <textarea [(ngModel)]="book.description"
+            name="description"
+            class="form-control">
+  </textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Buch anlegen
+  </button>
+</form>
+
+{{ book | json }}

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { BookStoreService } from './shared/book-store.service';
+import { CreateBookComponent } from './create-book/create-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    BookComponent
+    BookComponent,
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,

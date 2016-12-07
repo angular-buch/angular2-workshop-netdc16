@@ -1,5 +1,7 @@
 export class Book {
 
+  static empty() { return new Book('XXX-XXX-XXX', '', ''); }
+
   constructor(public isbn: string,
               public title: string,
               public description: string,
