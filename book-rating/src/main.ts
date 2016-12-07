@@ -9,4 +9,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic([
+  {
+    provide: 'STORE_URL',
+    useValue: environment.storeUrl
+  }
+]).bootstrapModule(AppModule);

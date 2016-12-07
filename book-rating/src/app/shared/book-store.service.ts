@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -9,11 +9,11 @@ import { Book } from '../shared/book';
 @Injectable()
 export class BookStoreService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, @Inject('STORE_URL') private url: string) { }
 
   getAll(): Observable<Book[]> {
     return this.http
-      .get('https://book-monkey2-api.angular-buch.com/books')
+      .get(`${this.url}/books`)
       .retry(5)
       .map((response: Response) => response.json())
       .map(booksRaw => <Book[]>booksRaw
