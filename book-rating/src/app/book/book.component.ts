@@ -1,3 +1,4 @@
+import { Book } from './../shared/book';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BookComponent implements OnInit {
 
-  @Input() book: string;
+  @Input() book: Book;
 
   constructor() { }
 
