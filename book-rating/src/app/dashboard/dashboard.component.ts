@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
   books: Book[];
 
   get count() {
-    console.log('ZUGRIFF');
     return this.books.length;
   }
 
@@ -23,5 +22,10 @@ export class DashboardComponent implements OnInit {
       new Book('111', 'Angular', 'Eine praktische Einführung', 5),
       new Book('222', 'AngularJS', 'Goldy but Oldie', 3)
     ];
+    this.books.sort();
+  }
+
+  reorderBooks(book: Book) {
+    this.books.sort((a, b) => b.rating - a.rating);
   }
 }

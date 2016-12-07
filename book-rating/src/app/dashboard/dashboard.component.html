@@ -1,4 +1,5 @@
 Anzahl: {{ count }}
 <app-book [book]="b"
-          *ngFor="let b of books">
+          *ngFor="let b of books"
+          (rated)="reorderBooks($event)">
 </app-book>
