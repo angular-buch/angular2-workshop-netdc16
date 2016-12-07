@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works! :-)';
-  books = ['Angular 2  - Einstieg', 'Stars Wars Rouge One'];
 }
