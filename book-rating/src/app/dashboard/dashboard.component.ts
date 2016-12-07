@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { BookComponent } from '../book/book.component';
-import 'rxjs/add/operator/filter';
+import { BookStoreService } from './../shared/book-store.service';
 
 import { Book } from '../shared/book';
 
@@ -9,31 +9,21 @@ import { Book } from '../shared/book';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit, AfterViewInit {
+export class DashboardComponent implements OnInit {
 
-  books: Book[];
-
-  @ViewChild(BookComponent) bc: BookComponent;
+  books: Book[] = [];
 
   get count() {
     return this.books.length;
   }
 
-  constructor() { }
+  constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.books = [
-      new Book('111', 'Angular', 'Eine praktische Einführung', 5),
-      new Book('222', 'AngularJS', 'Goldy but Oldie', 3)
-    ];
-    this.books.sort();
-  }
-
-  ngAfterViewInit() {
-    this.bc.rated
-      .filter((book: Book) => book.isbn === '111')
-      .subscribe((book) => {
-        console.log(book);
+    this.bs.getAll()
+      .subscribe(books => {
+        this.books = books;
+        this.books.sort();
       });
   }
 
