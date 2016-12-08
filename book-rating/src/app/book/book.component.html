@@ -8,4 +8,5 @@
 
   <button (click)="rateUp()" class="btn">+1</button>
   <button (click)="rateDown()" class="btn btn-danger">-1</button>
+  <a [routerLink]="['details', book.isbn]" class="btn btn-default">Details</a>
 </div>
