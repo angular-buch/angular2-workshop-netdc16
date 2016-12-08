@@ -1,9 +1,7 @@
-<p>
-  dashboard works!
-</p>
-
 <app-book
   [book]="b"
+  (rated)="reorderBooks($event)"
   *ngFor="let b of books"
 ></app-book>
 
+Count: {{ count }}
