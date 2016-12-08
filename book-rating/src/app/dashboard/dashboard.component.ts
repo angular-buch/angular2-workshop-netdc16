@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+
 import { Book } from './../shared/book';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/filter';
+import { BookStoreService } from './../shared/book-store.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,9 +11,8 @@ import 'rxjs/add/operator/filter';
 export class DashboardComponent implements OnInit {
 
   books: Book[] = [];
-  url = 'https://book-monkey2-api.angular-buch.com/books';
 
-  constructor(private http: Http) { }
+  constructor(private bs: BookStoreService) { }
 
   get count() {
     console.log('Change Detection!');
@@ -22,16 +20,11 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.http.get(this.url)
-        .map(response => response.json())
-        .map(json => json
-          .map(r => new Book(r.isbn, r.title, r.description, r.rating)))
-        .subscribe(books => {
+    this.bs.getAll()
+       .subscribe(books => {
           this.books = books;
+          this.reorderBooks();
         });
-
-    this.reorderBooks();
   }
 
   reorderBooks() {
