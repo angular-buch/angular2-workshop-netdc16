@@ -4,18 +4,16 @@
 
 
 
-# Angular 2 Workshop - Setup (Aktualisierung)
+# Angular 2 Workshop - Setup
 
 Ihre Trainer: [Johannes Hoppe](http://haushoppe-its.de/), [Gregor Woiwode](http://www.woiwode.info/)
 
 <hr>
 
+# Bitte auswählen!
 
-Liebe Teilnehmer,  
-wir möchten euch unbedingt darauf hinweisen, dass die Installation unbedingt rechtzeitig geschehen muss. Am Veranstaltungsort ist die Bandbreite stark eingeschränkt. Wenn Ihr die __angular-cli@1.0.0-beta.20-4__ schon installiert habt, braucht Ihr nicht zwingend updaten. Es handelt sich hauptsächlich im Bugfixes und um ein kleines Versions-Upgrade von Angular.
-
-Beste Grüße  
-Johannes & Gregor
+# [» Workshop Tag 1 (07.12.2016)](https://github.com/angular-buch/angular2-workshop-netdc16/tree/workshop_tag_1)
+# [» Workshop Tag 2 (08.12.2016)](https://github.com/angular-buch/angular2-workshop-netdc16/tree/workshop_tag_2)
 
 
 ## Benötigte Software
