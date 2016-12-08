@@ -15,5 +15,8 @@
           class="btn btn-danger"
           [disabled]="book.rating == 5">+1</button>
 
+  <a [routerLink]="['details', book.isbn]"
+     class="btn btn-default">Details</a>
+
 
 </div>

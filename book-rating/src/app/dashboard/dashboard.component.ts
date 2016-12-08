@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
   constructor(private bs: BookStoreService) { }
 
   get count() {
-    console.log('Change Detection!');
+    //console.log('Change Detection!');
     return this.books.length;
   }
 
